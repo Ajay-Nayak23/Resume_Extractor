@@ -84,8 +84,13 @@ Built using **Flask**, **spaCy**, **PyMuPDF**, and **Docker**. Styled with a cus
       └── README.md
 
  Screenshots :
-  ![image](https://github.com/user-attachments/assets/d5b97f7b-1d23-40fa-ad74-bd06bb86b7a2)
-  ![image](https://github.com/user-attachments/assets/e06a419c-10ed-44cb-a639-28aacf87cef9)
+  🔹 Homepage before uploading a resume – clean upload interface
+  ![image](https://github.com/user-attachments/assets/d8fdfde2-4dac-4059-a17c-54676c977541)
+
+  🔹 User selecting and uploading a PDF resume
+  ![image](https://github.com/user-attachments/assets/7f86fb56-b890-49ce-99ce-abe24d3365f4)
+
+  🔹 Extracted name, email, phone, and skills displayed clearly
   ![image](https://github.com/user-attachments/assets/987e50c4-1975-4818-96d9-8a5ff61a5515)
 
 Built with Windsurf :
