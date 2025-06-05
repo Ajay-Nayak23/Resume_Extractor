@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume Skill Extractor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #EAE4D5;
+            padding: 40px 50px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 650px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4da8da;
+            margin-bottom: 25px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #80d8c3;
+            background-color: #f5f5f5;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #4da8da;
+            color: white;
+            font-weight: bold;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3790c7;
+        }
+
+        .results {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .results h3 {
+            color: #4da8da;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .results ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .results li {
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            border-left: 6px solid #80d8c3;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .results strong {
+            color: #4da8da;
+        }
+
+        .badge {
+            background-color: #ffd66b;
+            color: #222;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin: 2px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Resume Skill Extractor</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="resume" accept=".pdf" required />
+            <br />
+            <input type="submit" value="Upload Resume" />
+        </form>
+
+        {% if result %}
+        <div class="results">
+            <h3>Extracted Info</h3>
+            <ul>
+                <li><strong>Name:</strong> {{ result.name }}</li>
+                <li><strong>Email:</strong> {{ result.email }}</li>
+                <li><strong>Phone:</strong> {{ result.phone }}</li>
+                <li>
+                    <strong>Skills:</strong><br />
+                    {% for skill in result.skills %}
+                    <span class="badge">{{ skill }}</span>
+                    {% endfor %}
+                </li>
+            </ul>
+            
+
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+flask
+spacy
+PyMuPDF
+python-dotenv
