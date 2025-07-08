@@ -20,12 +20,6 @@ Built using **Flask**, **spaCy**, **PyMuPDF**, and **Docker**. Styled with a cus
 
 ---
 
-## 🖥️ Demo
-
-> Replace this with your deployed link or demo video if available.
-
----
-
 ## 🛠️ Tech Stack
 
 | Component       | Tech        |
